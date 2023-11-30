@@ -1,5 +1,5 @@
-const separator = "#";
-const list = [12, 63, 82, 100, 109, 145];
+// const separator = "#";
+// const list = [12, 63, 82, 100, 109, 145];
 function handleFile() {
     const fileInput = document.getElementById('fileInput');
     const fileContentDisplay = document.getElementById('fileContent');
@@ -18,16 +18,16 @@ function handleFile() {
 
             // Procházení obsahu řádek po řádku
             const lines = fileContent.split('\n');
-            // let separator = lines[0][0];
-            // let list = [];
+            let separator = lines[0][0];
+            let list = [];
 
-            // lines[0].split('').forEach((item, index) => {
-            //     console.log(`${item} at ${index}`);
-            //     if (item == "x") {
-            //         list.push(index);
-            //     }
-            // });
-            // console.log(list)
+            lines[0].split('').forEach((item, index) => {
+                console.log(`${item} at ${index}`);
+                if (item == "x") {
+                    list.push(index);
+                }
+            });
+            console.log(list)
             // Procházení každého řádku a vložení "#" na nalezené indexy
             lines.forEach((line, lineIndex) => {
                 if (lineIndex > 0) {
