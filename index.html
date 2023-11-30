@@ -2,13 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="windows-1250">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Reader</title>
 </head>
 
 <body>
     <h1>File Reader</h1>
+    <p>V textovém souboru musí být první řádek vyplněn takto:</p>
+    <p>1. znak je oddělovač sloupců, dále běžná pomlčka "-" přes celou délku řádku pouze na místech předělů sloupců znak
+        "x".</p>
+    <p>Příklad:</p>
+    <p>#-----x---------------x--------------x--------x</p>
+    <p>Tlačítkem "Choose File" načteme tento zdrojový soubor. Ihned se objeví dialog pro uložení převedeného souboru.
+    </p>
+    <p>Tento nový soubor importovat do Google Tabulek (Soubor -> importovat), vybrat převedený soubor a v "Typu
+        oddělovače" vybrat "vlastní". Dojde k importu do jednotlivých sloupců.</p>
+    <p>Bude-li soubor "rozbitý", pak změnit oddělovač za jiný a opakovat postup.</p>
     <input type="file" id="fileInput" onchange="handleFile()">
     <pre id="fileContent"></pre>
 
